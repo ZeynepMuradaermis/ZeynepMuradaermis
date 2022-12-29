@@ -1,0 +1,31 @@
+int in_1= 3;
+int in_2= 4;
+int ena= 2;
+int in_3 = 7;
+int in_4 = 6;
+int enb = 5;
+int speed= 230;
+
+
+
+void setup() {
+  // put your setup code here, to run once:
+   pinMode(in_1, OUTPUT);
+   pinMode(in_2, OUTPUT);
+   pinMode(ena, OUTPUT);
+   digitalWrite(in_1,HIGH);
+   digitalWrite(in_2,LOW);
+   digitalWrite(in_4,HIGH);
+   digitalWrite(in_3,LOW);
+   Serial.begin(9600);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  Serial.println(speed);
+  analogWrite(ena, speed);
+  analogWrite(enb, speed);
+  delay(100);
+
+}
